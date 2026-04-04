@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - Jared (Yusef) Amen</title>
+    <meta name="description" content="Web applications and tools built by Jared (Yusef) Amen. Free to use and open source.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jaredamen.github.io/apps/">
+    <meta property="og:title" content="Apps - Jared (Yusef) Amen">
+    <meta property="og:description" content="Web applications and tools built by Jared (Yusef) Amen. Free to use and open source.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jaredamen.github.io/apps/">
+    <meta property="twitter:title" content="Apps - Jared (Yusef) Amen">
+    <meta property="twitter:description" content="Web applications and tools built by Jared (Yusef) Amen. Free to use and open source.">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    
+    <style>
+        .apps-hero {
+            padding: 8rem 0 4rem 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .app-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+            border-color: var(--accent-primary);
+        }
+        
+        .app-card:hover::before {
+            opacity: 1;
+        }
+        
+        .app-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .app-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .app-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+        
+        .app-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .app-status {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: rgba(0, 255, 136, 0.2);
+            color: var(--accent-success);
+            border: 1px solid var(--accent-success);
+        }
+        
+        .app-type {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+        }
+        
+        .launch-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--gradient);
+            color: var(--bg-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            gap: 0.5rem;
+        }
+        
+        .launch-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+        
+        .back-link {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+        
+        .apps-footer-note {
+            text-align: center;
+            color: var(--text-muted);
+            margin: 4rem 0 2rem 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Jared Amen</a>
+            <div class="nav-links">
+                <a href="/#about">About</a>
+                <a href="/#projects">Projects</a>
+                <a href="/#consulting">Consulting</a>
+                <a href="/apps/" class="active">Apps</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="apps-hero">
+            <div class="container">
+                <a href="/" class="back-link">
+                    ← Back to Portfolio
+                </a>
+                <h1 class="hero-title">Apps & Tools</h1>
+                <p class="hero-description">
+                    Web applications and tools I've built to solve real problems. 
+                    All free to use and open source.
+                </p>
+            </div>
+        </section>
+
+        <section class="apps-section">
+            <div class="container">
+                <div class="apps-grid">
+                    
+                    <div class="app-card">
+                        <span class="app-icon">🏕️</span>
+                        <h2 class="app-title">Basecamp</h2>
+                        <div class="app-meta">
+                            <span class="app-status">PWA Ready</span>
+                            <span class="app-type">React • TypeScript</span>
+                        </div>
+                        <p class="app-description">
+                            Study companion Progressive Web App. Review flashcard decks and listen to audio briefings from your phone. 
+                            Works offline and can be installed to your home screen.
+                        </p>
+                        <a href="/apps/basecamp/" class="launch-btn">
+                            Launch App 🚀
+                        </a>
+                    </div>
+                    
+                    <div class="app-card" style="opacity: 0.6;">
+                        <span class="app-icon">🔧</span>
+                        <h2 class="app-title">More Tools Coming</h2>
+                        <div class="app-meta">
+                            <span class="app-status" style="background: rgba(128, 128, 128, 0.2); color: var(--text-muted); border-color: var(--text-muted);">
+                                In Development
+                            </span>
+                            <span class="app-type">Various Tech</span>
+                        </div>
+                        <p class="app-description">
+                            Additional web tools and utilities are in development. 
+                            Check back soon or follow my GitHub for updates on new releases.
+                        </p>
+                        <a href="https://github.com/jaredamen" class="launch-btn" style="background: var(--bg-tertiary); color: var(--text-secondary);">
+                            Follow on GitHub
+                        </a>
+                    </div>
+
+                </div>
+                
+                <div class="apps-footer-note">
+                    <p>These tools are free to use and built with care by Jared (Yusef) Amen.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Jared (Yusef) Amen. Built by hand with care.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/jaredamen" aria-label="GitHub Profile">GitHub</a>
+                    <a href="https://linkedin.com/in/jaredamen" aria-label="LinkedIn Profile">LinkedIn</a>
+                    <a href="mailto:jared.yusef@gmail.com" aria-label="Email">Email</a>
+                    <a href="/" aria-label="Portfolio">Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
