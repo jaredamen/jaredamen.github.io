@@ -55,6 +55,6 @@ This repository follows a branch + PR workflow. Never commit directly to main.
 
 - **Email:** jared.yusef@gmail.com
 - **GitHub:** github.com/jaredamen
-- **LinkedIn:** linkedin.com/in/jaredamen
+- **LinkedIn:** www.linkedin.com/in/jaredev
 
 Built by hand with care. © 2026 Jared (Yusef) Amen
