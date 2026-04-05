@@ -292,6 +292,17 @@ section h2 {
     line-height: 1.6;
 }
 
+.project-description code {
+    background: var(--bg-tertiary);
+    color: var(--accent-primary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
 .project-tags {
     display: flex;
     flex-wrap: wrap;
