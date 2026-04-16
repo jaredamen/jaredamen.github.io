@@ -10,18 +10,20 @@
 - Use this file to verify all requirements are met when working on this project
 
 ## Development Notes
-- Static site with no build process (except basecamp PWA)
+- Static site with no build process
 - Dark theme with gradient accents
 - Mobile-first responsive design
 - SEO optimized with proper meta tags
-- PWA properly configured for /apps/basecamp/ path
 
-## Basecamp PWA Updates
-When updating the Basecamp PWA:
-1. Clone: `git clone https://github.com/jaredamen/basecamp.git`
-2. Build: `cd basecamp && npm install && npm run build`  
-3. Copy: `cp -r dist/* /path/to/jaredamen.github.io/apps/basecamp/`
-4. Update paths in copied files to work from `/apps/basecamp/` (already configured)
+## Apps Page
+
+The `/apps/` page lists projects. Each card should link out to where the app actually runs.
+
+**Basecamp** is hosted on Vercel at `https://basecamp-pink.vercel.app` — it needs a backend (auth, Stripe, AI proxy) that GitHub Pages can't run. The `apps/index.html` Basecamp card links directly to the Vercel URL.
+
+`apps/basecamp/index.html` is a minimal redirect page in case anyone has the old `/apps/basecamp/` URL bookmarked. It forwards to the Vercel deployment.
+
+**Do not** restore a static build to `/apps/basecamp/` — the backend features (auth, payments, AI generation) won't work without Vercel's serverless functions.
 
 ## Deployment
 - GitHub Pages serves automatically from main branch
